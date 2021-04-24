@@ -18,5 +18,6 @@ def fetch_data_from_nbp(type):
 
 # pobranie danych z bazy danych
 def get_data_from_db(type):
-    json_response = {"name": type, 'rates': fetch_data_from_nbp(type)}
+    json_response = {"name": type,
+                     'rates': fetch_data_from_nbp(type)}
     return json_response
