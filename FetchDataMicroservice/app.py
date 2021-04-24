@@ -11,7 +11,7 @@ def getDataFromDB(type_data):
         data = dataManager.get_data_from_db(type_data)
 
         response = app.response_class(
-            response= json.dumps(data),
+            response=json.dumps(data),
             status=200,
             mimetype='application/json'
         )
