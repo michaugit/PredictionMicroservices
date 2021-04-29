@@ -14,12 +14,12 @@ def main():
 @app.route('/<to_predict>/<prediction_method>')
 def details(to_predict, prediction_method):
 
-    prediction_html = "<p>WYKRES dla " + prediction_method + "</p>" #html otrzymany z jsona od flaska 2
+    prediction_plot_html = "<p>WYKRES dla " + prediction_method + "</p>" #html otrzymany z jsona od flaska 2
 
     return render_template('prediction_details.html',
                            config=config.prediction_types[to_predict],
                            prediction_method=prediction_method,
-                           prediction_html=prediction_html)
+                           prediction_html=prediction_plot_html)
 
 
 if __name__ == '__main__':
