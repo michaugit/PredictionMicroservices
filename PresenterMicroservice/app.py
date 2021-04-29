@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 import config
+import dataProvider
 
 app = Flask(__name__)
 
@@ -14,7 +15,7 @@ def main():
 @app.route('/<to_predict>/<prediction_method>')
 def details(to_predict, prediction_method):
 
-    prediction_plot_html = "<p>WYKRES dla " + prediction_method + "</p>" #html otrzymany z jsona od flaska 2
+    prediction_plot_html = dataProvider.get_prediction(to_predict, prediction_method)
 
     return render_template('prediction_details.html',
                            config=config.prediction_types[to_predict],

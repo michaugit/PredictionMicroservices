@@ -1,3 +1,5 @@
+data_provider_ip = 'http://127.0.0.1:5001/getprediction/'
+
 prediction_methods = {
     'metoda_1': {'name': "metoda_1",
                  'description': "opis metody 1"},
