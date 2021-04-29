@@ -1,0 +1,12 @@
+body
+{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#element2
+{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 90px;
+    alignment: left;
+    width: 25%;
+}

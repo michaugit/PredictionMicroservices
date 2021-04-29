@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <title>Choose to predict</title>
+</head>
+<body>
+<div id="types">
+    <p>What city has the best climate?</p>
+    <p>When planning your trip or vacation you often check weather data for
+        humidity and temperature.</p>
+    <p>Below is the collection of the yearly average values for the following cities: </p>
+    <ul>
+        {% for type in prediction_type %}
+            <li><p>{{ type }}</p></li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
