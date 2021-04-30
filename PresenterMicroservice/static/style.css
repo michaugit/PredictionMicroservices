@@ -1,12 +1,93 @@
 body
 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: url("background2.jpg") ;
+    background-size: 1920px;
 }
-#types
-{
+
+#body_page{
+    width: 900px;
+    margin: 0 auto 0 auto;
+    color: black;
+    background-color: white;
+    padding: 50px;
+    border-style: solid;
+    border-radius: 16px;
+    border-color: white;
+}
+
+#matlibplot{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mpld3-figure{
+    background-color: white;
+}
+
+
+
+#navigation_menu{
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+#navigation_menu ul{
+    border-style: solid;
+    border-radius: 16px;
+    border-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #333333;*/
+    background-color: black;
+}
+#navigation_menu li{
     display: inline-block;
-    vertical-align: top;
-    margin-top: 90px;
-    alignment: left;
-    width: 25%;
+}
+
+#navigation_menu li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+#navigation_menu li a:hover{
+    background-color: cornflowerblue;
+}
+
+#types{
+    text-align:center;
+    width: 40%;
+    margin: 240px auto 20px;
+}
+
+
+#types ul{
+    border-style: solid;
+    border-radius: 16px;
+    border-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #333333;*/
+    background-color: black;
+}
+#types li{
+    padding: 16px;
+}
+
+#types li a{
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+#types li:hover{
+    background-color: cornflowerblue;
 }

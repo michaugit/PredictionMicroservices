@@ -6,14 +6,9 @@
     <title>Prediction - {{ config['title'] }}</title>
 </head>
 <body>
-<div id="back_to_menu">
-    <a href="{{ url_for('main') }}"> Strona główna</a>
-</div>
-<div id="description_of_type">
-    <p>{{config['description']}}</p>
-</div>
-<div id="prediction_methods">
+<div id="navigation_menu">
     <ul>
+        <li><a href="{{ url_for('main') }}"> Strona główna</a></li>
         {% for method in config['prediction_methods'] %}
             <li><a href="{{ url_for('details',
                             to_predict=config['link'],
@@ -22,11 +17,18 @@
         {% endfor %}
     </ul>
 </div>
-<div id="description_of_prediction_type">
-    <p>OPIS METODY: {{config['prediction_methods'][prediction_method]['description']}}</p>
-</div>
-<div id="matlibplot">
-    {{ prediction_html|safe }}
+<div id="body_page">
+    <div id="description_of_type">
+        <p>{{config['description']}}</p>
+    </div>
+
+    <div id="description_of_prediction_type">
+        <p>OPIS METODY: {{config['prediction_methods'][prediction_method]['description']}}</p>
+    </div>
+
+    <div id="matlibplot">
+        {{ prediction_html|safe }}
+    </div>
 </div>
 </body>
 </html>
