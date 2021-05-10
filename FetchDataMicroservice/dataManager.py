@@ -23,3 +23,10 @@ def get_data_from_db(type_data):
     json_response = {"name": type_data,
                      'rates': fetch_data_from_nbp(type_data)}
     return json_response
+
+
+# wykonanie odpowiednich zapytań do nbp i zapisanie ich w bazie danych
+# działa to asynchronicznie w tle np. raz na dzień aby updatować baze danych
+# docelowo będą tutaj wywoływane funkcje do pobrania jsonow z nbp coś w stylu jak fetch_data_from_nbp()
+def background_periodic_task():
+    print("Start background periodic task fetching data from nbp and saving it to our DB")

@@ -1,5 +1,6 @@
 from flask import Flask
-import json, dataManager
+from apscheduler.schedulers.background import BackgroundScheduler
+import json, dataManager, datetime
 
 app = Flask(__name__)
 
@@ -19,5 +20,13 @@ def get_data_from_db(type_data):
     return response
 
 
+def background_task_scheduler():
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(dataManager.background_periodic_task, 'interval', seconds=10, next_run_time=datetime.datetime.now())
+    scheduler.start()
+
+
+
 if __name__ == '__main__':
     app.run()
+background_task_scheduler()
