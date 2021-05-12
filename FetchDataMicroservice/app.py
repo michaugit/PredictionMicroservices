@@ -26,7 +26,6 @@ def background_task_scheduler():
     scheduler.start()
 
 
-
 if __name__ == '__main__':
     app.run()
 background_task_scheduler()

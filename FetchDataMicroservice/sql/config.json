@@ -1,0 +1,9 @@
+{
+    dbUser: "postgres",
+    dbPass: "haslo",
+    dbName:"postgres",
+    dbTypes: "predictionDB.types",
+    dbGold: "predictionDB.gold",
+    dbUsd: "predictionDB.usd",
+    dbEur: "predictionDB.eur"
+}
