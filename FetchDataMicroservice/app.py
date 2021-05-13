@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route('/getdatafromdb/<type_data>', methods=['GET'])
 def get_data_from_db(type_data):
     response = app.response_class(status=404)
+    type_data = type_data.upper()
 
     if dataManager.check_type(type_data):
         data = dataManager.get_data_from_db(type_data)
@@ -22,7 +23,7 @@ def get_data_from_db(type_data):
 
 def background_task_scheduler():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(dataManager.background_periodic_task, 'interval', seconds=10, next_run_time=datetime.datetime.now())
+    scheduler.add_job(dataManager.fetch_data_from_nbp, 'interval', seconds=10, next_run_time=datetime.datetime.now())
     scheduler.start()
 
 
