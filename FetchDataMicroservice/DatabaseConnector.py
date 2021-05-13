@@ -40,7 +40,7 @@ class DatabaseConnector(metaclass=SingletonMeta):
             self.conn.close()
             print('Database connection closed.')
 
-    def execute(self, query: str):
+    def execute_select(self, query: str):
         data = None
         if self.conn:
             cursor = self.conn.cursor()
@@ -50,3 +50,11 @@ class DatabaseConnector(metaclass=SingletonMeta):
             print("No connection to Database.")
 
         return data
+
+    def execute_insert(self, query: str):
+        if self.conn:
+            cursor = self.conn.cursor()
+            cursor.execute(query)
+            self.conn.commit()
+        else:
+            print("No connection to Database.")

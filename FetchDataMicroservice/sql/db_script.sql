@@ -9,7 +9,7 @@ CREATE TABLE predictionDB.types(
 
 CREATE TABLE predictionDB.GOLD(
     date DATE UNIQUE NOT NULL,
-    value MONEY NOT NULL,
+    value NUMERIC NOT NULL,
 	PRIMARY KEY (date)
 	);
 INSERT INTO predictionDB.types(id, full_name, table_id) VALUES ('GOLD', 'Zloto', 'G');
