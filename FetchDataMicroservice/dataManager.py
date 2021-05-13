@@ -2,6 +2,9 @@ import requests
 
 
 # sprawdzenie czy obsługujemy taką walutę
+from DatabaseConnector import DatabaseConnector
+
+
 def check_type(type_data):
     # to raczej by trzeba było pobrać z bazy danych
     type_datas = ['gold', 'usd']
@@ -29,4 +32,9 @@ def get_data_from_db(type_data):
 # działa to asynchronicznie w tle np. raz na dzień aby updatować baze danych
 # docelowo będą tutaj wywoływane funkcje do pobrania jsonow z nbp coś w stylu jak fetch_data_from_nbp()
 def background_periodic_task():
+    db = DatabaseConnector()
+    data = db.execute("SELECT * FROM predictionDB.types ")
+    # print(data)
+    for record in data:
+        print(record)
     print("Start background periodic task fetching data from nbp and saving it to our DB")
