@@ -1,6 +1,6 @@
 {
     "dbUser": "postgres",
-    "dbPass": "haslo",
+    "dbPass": "p",
     "dbName": "postgres",
     "dbTypes": "predictionDB.types",
     "dbGold": "predictionDB.gold",
