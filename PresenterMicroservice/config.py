@@ -1,12 +1,22 @@
 data_provider_ip = 'http://127.0.0.1:5001/getprediction/'
 
 prediction_methods = {
-    'metoda_1': {'name': "metoda_1",
+    'ExponentialSmoothing': {'name': "ExponentialSmoothing",
                  'description': "opis metody 1"},
-    'metoda_2': {'name': "metoda_2",
+    'ARIMA': {'name': "ARIMA",
                  'description': "opis metody 2"},
-    'metoda_3': {'name': "metoda_3",
-                 'description': "opis metody 3"}
+    'AutoARIMA': {'name': "AutoARIMA",
+                 'description': "opis metody 3"},
+    'Prophet': {'name': "Prophet",
+                 'description': "opis metody 4"},
+    'FFT': {'name': "FFT",
+                 'description': "opis metody 5"},
+    'NaiveDrift': {'name': "NaiveDrift",
+                 'description': "opis metody 6"},
+    'ThetaMethod': {'name': "ThetaMethod",
+                 'description': "opis metody 7"},
+    # 'NBEATS': {'name': "NBEATS",
+    #                 'description': "opis metody 8"},
 }
 
 prediction_types = {
@@ -14,14 +24,14 @@ prediction_types = {
                 'link': "gold",
                 "title": "Złoto",
                 "description": "Jakiś opis opisujący złoto",
-                "default_prediction_method": prediction_methods['metoda_1'],
+                "default_prediction_method": prediction_methods['ExponentialSmoothing'],
                 "prediction_methods": prediction_methods
             },
     'usd': {
                 'link': "usd",
                 "title": "Dolar Amerykański",
                 "description": "Jakiś opis opisujący usd",
-                "default_prediction_method": prediction_methods['metoda_1'],
+                "default_prediction_method": prediction_methods['ExponentialSmoothing'],
                 "prediction_methods": prediction_methods
             }
 }

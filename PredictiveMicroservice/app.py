@@ -2,14 +2,14 @@ import json
 
 from flask import Flask
 import requests
-import predictors
+import predictorsProvider
 
 app = Flask(__name__)
 
 
 @app.route('/getprediction/<to_predict>/<prediction_method>', methods=['GET'])
 def get_prediction(to_predict, prediction_method):
-    data = predictors.tmp_predictor(to_predict, prediction_method)
+    data = predictorsProvider.tmp_predictor(to_predict, prediction_method)
     response = app.response_class(
         response=json.dumps(data),
         status=200,
