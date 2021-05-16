@@ -33,6 +33,41 @@ prediction_types = {
                 "description": "Jakiś opis opisujący usd",
                 "default_prediction_method": prediction_methods['ExponentialSmoothing'],
                 "prediction_methods": prediction_methods
+            },
+    'aud': {
+                'link': "aud",
+                "title": "Dolar Australijski",
+                "description": "Jakiś opis opisujący aud",
+                "default_prediction_method": prediction_methods['ExponentialSmoothing'],
+                "prediction_methods": prediction_methods
+            },
+    'gbp': {
+                'link': "gbp",
+                "title": "Funt Szterling",
+                "description": "Jakiś opis opisujący gbp",
+                "default_prediction_method": prediction_methods['ExponentialSmoothing'],
+                "prediction_methods": prediction_methods
+            },
+    'chf': {
+                'link': "chf",
+                "title": "Frank Szwajcarski",
+                "description": "Jakiś opis opisujący chf",
+                "default_prediction_method": prediction_methods['ExponentialSmoothing'],
+                "prediction_methods": prediction_methods
+            },
+    'jpy': {
+                'link': "jpy",
+                "title": "Jen (Japonia)",
+                "description": "Jakiś opis opisujący jen",
+                "default_prediction_method": prediction_methods['ExponentialSmoothing'],
+                "prediction_methods": prediction_methods
+            },
+    'czk': {
+                'link': "czk",
+                "title": "Korona Czeska",
+                "description": "Jakiś opis opisujący czk",
+                "default_prediction_method": prediction_methods['ExponentialSmoothing'],
+                "prediction_methods": prediction_methods
             }
 }
 

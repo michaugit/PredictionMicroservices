@@ -62,7 +62,7 @@ body
 #types{
     text-align:center;
     width: 40%;
-    margin: 240px auto 20px;
+    margin: 150px auto 20px;
 }
 
 
@@ -91,4 +91,11 @@ body
 
 #types li:hover{
     background-color: cornflowerblue;
+}
+
+#chose_method{
+    margin: 2px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: cornflowerblue;
 }

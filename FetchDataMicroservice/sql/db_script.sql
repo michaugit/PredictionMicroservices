@@ -22,7 +22,20 @@ INSERT INTO predictionDB.types(id, full_name, table_id) VALUES ('USD', 'Dolar Am
 CREATE TABLE predictionDB.EUR AS TABLE predictionDB.GOLD;
 INSERT INTO predictionDB.types(id, full_name, table_id) VALUES ('EUR', 'Euro', 'A');
 
+CREATE TABLE predictionDB.AUD AS TABLE predictionDB.GOLD;
+INSERT INTO predictionDB.types(id, full_name, table_id) VALUES ('AUD', 'Dolar Australijski', 'A');
 
+CREATE TABLE predictionDB.CHF AS TABLE predictionDB.GOLD;
+INSERT INTO predictionDB.types(id, full_name, table_id) VALUES ('CHF', 'Frank Szwajcarski', 'A');
+
+CREATE TABLE predictionDB.GBP AS TABLE predictionDB.GOLD;
+INSERT INTO predictionDB.types(id, full_name, table_id) VALUES ('GBP', 'Funt Szterling', 'A');
+
+CREATE TABLE predictionDB.JPY AS TABLE predictionDB.GOLD;
+INSERT INTO predictionDB.types(id, full_name, table_id) VALUES ('JPY', 'Jen (Japonia)', 'A');
+
+CREATE TABLE predictionDB.CZK AS TABLE predictionDB.GOLD;
+INSERT INTO predictionDB.types(id, full_name, table_id) VALUES ('CZK', 'Korona Czeska', 'A');
 
 
 

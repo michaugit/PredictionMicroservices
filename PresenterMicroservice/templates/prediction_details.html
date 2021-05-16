@@ -11,10 +11,17 @@
     <ul>
         <li><a href="{{ url_for('main') }}"> Strona główna</a></li>
         {% for method in config['prediction_methods'] %}
+            {% if method == prediction_method %}
+               <li><div id = "chose_method"><b><a href="{{ url_for('details',
+                            to_predict=config['link'],
+                            prediction_method=method)
+                    }}">{{ method }}</a></b></div></li>
+           {% else %}
             <li><a href="{{ url_for('details',
                             to_predict=config['link'],
                             prediction_method=method)
                     }}">{{ method }}</a></li>
+            {% endif %}
         {% endfor %}
     </ul>
 </div>
