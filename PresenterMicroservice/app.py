@@ -15,12 +15,15 @@ def main():
 @app.route('/<to_predict>/<prediction_method>')
 def details(to_predict, prediction_method):
 
-    prediction_plot_html = dataProvider.get_prediction(to_predict, prediction_method)
+    html_matplotlib, mse, ope, coe = dataProvider.get_prediction(to_predict, prediction_method)
 
     return render_template('prediction_details.html',
                            config=config.prediction_types[to_predict],
                            prediction_method=prediction_method,
-                           prediction_html=prediction_plot_html)
+                           prediction_html=html_matplotlib,
+                           mse=mse,
+                           ope=ope,
+                           coe=coe)
 
 
 if __name__ == '__main__':

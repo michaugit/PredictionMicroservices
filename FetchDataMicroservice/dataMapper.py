@@ -25,7 +25,7 @@ def update_db(response, id):
 
 def get_json_data(id):
     db = DatabaseConnector()
-    data = db.execute_select(f"SELECT * FROM predictionDB.{id} ORDER BY date ASC LIMIT 30;")
+    data = db.execute_select(f"SELECT * FROM predictionDB.{id} ORDER BY date ASC;")
     json_data = []
     for record in data:
         json_data.append({"date": str(record[0]), "value": str(record[1])})

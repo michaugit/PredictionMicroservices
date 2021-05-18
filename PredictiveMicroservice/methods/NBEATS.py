@@ -1,17 +1,12 @@
 from darts.models import NBEATSModel, StandardRegressionModel
-import matplotlib.pyplot as plt
-import mpld3
-import plotly
-from darts import TimeSeries
-import pandas as pd
-from darts.models import FFT
-from sklearn.linear_model import LinearRegression
+
 
 import predictorsProvider
+from darts import TimeSeries
 
 
 def predict(df):
-    series, train, val = predictorsProvider.split_data(df)
+    series, train, val, series_row = predictorsProvider.split_data(df)
     model = NBEATSModel(
         input_chunk_length=30,
         output_chunk_length=7,
@@ -28,6 +23,6 @@ def predict(df):
 
     model.fit(train, val_series=val, verbose=True)
     prediction = model.predict(len(val))
-
-    return predictorsProvider.prepare_plot(series, prediction, 'Method with Prophet model')
+    pred = TimeSeries.append(series_row, prediction)
+    return series, pred
 

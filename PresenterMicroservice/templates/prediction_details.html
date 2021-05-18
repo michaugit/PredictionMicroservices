@@ -26,16 +26,23 @@
     </ul>
 </div>
 <div id="body_page">
-    <div id="description_of_type">
-        <p>{{config['description']}}</p>
-    </div>
+{#    <div id="description_of_type">#}
+{#        <p>{{config['prediction_methods'][prediction_method]['name']}}</p>#}
+{#    </div>#}
 
     <div id="description_of_prediction_type">
-        <p>OPIS METODY: {{config['prediction_methods'][prediction_method]['description']}}</p>
+        <p>{{config['prediction_methods'][prediction_method]['description']}}</p>
     </div>
 
     <div id="matlibplot">
         {{ prediction_html|safe }}
+    </div>
+
+    <div id="prediction_results_check">
+        <p> Błąd średniokwadratowy: {{ mse|safe }}</p>
+        <p> Ogólny błąd procentowy: {{ ope|safe }}</p>
+        <p> Współczynnik zmienności: {{ coe|safe }} %</p>
+
     </div>
 </div>
 </body>

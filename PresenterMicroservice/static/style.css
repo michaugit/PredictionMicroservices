@@ -99,3 +99,9 @@ body
     border-radius: 2px;
     border-color: cornflowerblue;
 }
+
+#description_of_type{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
